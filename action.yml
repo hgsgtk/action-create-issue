@@ -1,0 +1,26 @@
+name: create-issue
+author: 'hgsgtk'
+description: Create a GitHub issue
+inputs:
+  github_token:
+    description: "GitHub Token"
+    default: '${{ github.token }}'
+    required: false
+  title:
+    description: "GitHub Issue Title"
+    required: true
+  body:
+    description: "GitHub Issue Body"
+    required: false
+  assignees:
+    description: "GitHub Issue Assignee"
+    required: false
+outputs:
+  issue:
+    description: "The issue created by GitHub Action as a JSON"
+runs:
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  icon: "alert-triangle"
+  color: "red"

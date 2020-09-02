@@ -1,0 +1,17 @@
+{
+  "name": "action-create-issue",
+  "version": "1.0.0",
+  "description": "GitHub Action Create Issue",
+  "main": "dist/index.js",
+  "repository": "git@github.com:hgsgtk/action-create-issue.git",
+  "author": "Kazuki Higashiguchi <hgsgtk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.5",
+    "@actions/github": "^4.0.0",
+    "@vercel/ncc": "^0.24.0"
+  },
+  "scripts": {
+    "build": "ncc build src/index.js -o dist"
+  }
+}
